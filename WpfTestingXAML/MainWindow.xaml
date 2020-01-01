@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfTestingXAML.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTestingXAML"
+        mc:Ignorable="d"
+        MinHeight="300" MinWidth="400"
+        Title="Ideal Weight Calculator" Name="ThisWindow" Loaded="OnLoad">
+    
+    <Grid>
+        <TabControl>
+            <TabItem Name="TAB1">
+                <TabItem.Header>
+                    <TextBlock Text="First Page"/>
+                </TabItem.Header>
+                <Frame Name="FirstTabContent" Content="{Binding Source={StaticResource PageDataSource}, Path=Content}">
+                </Frame>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="Second Page"/>
+                </TabItem.Header>
+                <Image Height="300" Source="Images/Weight Formulas.PNG" Stretch="Uniform"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
